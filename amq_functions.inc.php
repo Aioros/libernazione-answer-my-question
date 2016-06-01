@@ -329,7 +329,7 @@ function answerMyQuestionView() {
 					</td></tr>
 				<?php } ?>
 			</table>
-			<div id="amq_form_container">
+			<div id="amq_modal">
 			<form id="amq_form" action="" method="post">
 				<input type="hidden" name="id" value="">
 				<input type="hidden" name="posted" value="1">
@@ -339,8 +339,7 @@ function answerMyQuestionView() {
 				<input type="text" name="subject" id="subject" value="">
 				<textarea class="question_text" name="question" id="question"></textarea>
 				<h1 id="answer_title"><?php echo (strlen($answer) > 0 ? 'Modify Your Answer' : 'Your Answer');?>:</h1>
-				<?php
-				wp_editor("", "answer"); ?>
+				<?php wp_editor("", "answer"); ?>
 				<button class="clean-gray" id="save">Save</button>
 				<button class="clean-gray" id="cancel">Cancel &amp; Close</button>
 			</form>

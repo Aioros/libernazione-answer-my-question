@@ -25,7 +25,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-require_once('functions.inc.php');
+require_once('amq_functions.inc.php');
 register_activation_hook(__FILE__, 'amq_install');
 register_setting('amq_options', 'amq_option_item', 'amq_options_validate');
 add_action('plugins_loaded', 'amq_update_db_check');

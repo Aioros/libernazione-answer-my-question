@@ -733,7 +733,7 @@ jQuery(function($) {
 		dateFormat: 'uk',
 		sortList: [[1,1]]
 	});
-	console.log($("#pager .pagesize").val());
+	
 	$("#amq_list").tablesorterPager({
 		size: $("#pager .pagesize").val(),
 		container: $("#pager")}
@@ -803,11 +803,10 @@ jQuery(function($) {
 			$("#subject").val(data.subject);
 			$("#question").val(data.question);
 			$("#answer_title").html(data.answer.length > 0 ? "Modify your answer" : "Your Answer");
-			console.log(tinyMCE.editors);
 			if (tinyMCE.activeEditor)
 				tinyMCE.activeEditor.setContent(data.answer);
 			else
-				$("#anwer").val(data.answer);
+				$("#answer").val(data.answer);
 			if (data.answer.length > 0) {
 				$('<p id="question_answered">You answered this question on <strong>' + data.date_response + '</strong></p>').insertBefore($("#save"));
 			} else if (data.user_email.length > 0) {
