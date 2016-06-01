@@ -1,0 +1,72 @@
+#answer-my-question-form .inner {
+	padding: 30px;
+}
+
+#answer-my-question-form h1 {
+	margin: 0 0 10px;
+}
+
+#answer-my-question-form #question-form .required {
+    color: red;
+}
+
+#answer-my-question-form #question-form input[type="text"] {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#answer-my-question-form #question-form textarea {
+	width: 100%;
+	height: 200px;
+	resize: vertical;
+}
+
+#answer-my-question-form #message-sent {
+	text-align: center;
+	margin: 10% auto;
+	display: none;
+}
+
+#answer-my-question-form #sending-loader {
+	padding: 120px 0 120px 280px;
+	display: none;
+}
+
+button.clean-gray {
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #CCC);
+	background-image: -moz-linear-gradient(top, #EEE, #CCC);
+	background-image: -ms-linear-gradient(top, #EEE, #CCC);
+	background-image: -o-linear-gradient(top, #EEE, #CCC);
+	background-image: linear-gradient(top, #EEE, #CCC);
+	border: 1px solid #CCC;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	color: #333;
+	font: bold 15px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	line-height: 1;
+	padding: 8px 0;
+	text-align: center;
+	text-shadow: 0 1px 0 #EEE;
+	width: 150px;
+	float:right;
+}
+
+button.clean-gray:hover {
+	background-color: #DDD;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DDD), color-stop(100%, #BBB));
+	background-image: -webkit-linear-gradient(top, #DDD, #BBB);
+	background-image: -moz-linear-gradient(top, #DDD, #BBB);
+	background-image: -ms-linear-gradient(top, #DDD, #BBB);
+	background-image: -o-linear-gradient(top, #DDD, #BBB);
+	background-image: linear-gradient(top, #DDD, #BBB);
+	border: 1px solid #BBB;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
+	text-shadow: 0 1px 0 #DDD;
+}
