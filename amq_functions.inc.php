@@ -131,7 +131,8 @@ function insert_form() {
 	$table_name = $wpdb->prefix . "options";
 	
 	//Get the plugin options
-	$result = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
+	//$result = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
+	$result = get_option("amq_option_item");
 	
 	if(count($result) > 0){
 		foreach($result as $row){
@@ -179,7 +180,9 @@ function answerMyQuestionView() {
 	
 	$table_name = $wpdb->prefix . "options";
 	//Get the plugin options
-	$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
+	//$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
+	$option = get_option("amq_option_item");
+
 	if (count($options) > 0) {
 		foreach($options as $row) {
 			$details = unserialize($row->option_value);
@@ -607,7 +610,8 @@ function add_css_content($content) {
 	global $post;
 	$table_name = $wpdb->prefix . "options";
 	//Get the plugin options
-	$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
+	//$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
+	$option = get_option("amq_option_item");
 
 	if (count($options) > 0) {
 		foreach($options as $row) {
@@ -631,7 +635,8 @@ function check_published_questions($post_ID, $post_after, $post_before) {
 	global $wpdb;
 	$table_name = $wpdb->prefix . "options";
 	//Get the plugin options
-	$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
+	//$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
+	$option = get_option("amq_option_item");
 
 	if (count($options) > 0) {
 		foreach($options as $row) {
