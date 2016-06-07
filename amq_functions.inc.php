@@ -180,14 +180,8 @@ function answerMyQuestionView() {
 	
 	$table_name = $wpdb->prefix . "options";
 	//Get the plugin options
-	//$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
-	$options = get_option("amq_option_item");
-
-	if (count($options) > 0) {
-		foreach($options as $row) {
-			$details = unserialize($row->option_value);
-		}
-	}
+	$details = get_option("amq_option_item");
+	
 	$amq_category = (!empty($details['category']) ? $details['category'] : "");
 	$amq_column = (!empty($details['column']) ? $details['column'] : "");
 	
@@ -610,14 +604,8 @@ function add_css_content($content) {
 	global $post;
 	$table_name = $wpdb->prefix . "options";
 	//Get the plugin options
-	//$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
-	$options = get_option("amq_option_item");
+	$details = get_option("amq_option_item");
 
-	if (count($options) > 0) {
-		foreach($options as $row) {
-			$details = unserialize($row->option_value);
-		}
-	}
 	$amq_category = (!empty($details['category']) ? $details['category'] : "");
 	$category = get_the_category();
 	$category = $category[0]->cat_ID;
@@ -635,14 +623,8 @@ function check_published_questions($post_ID, $post_after, $post_before) {
 	global $wpdb;
 	$table_name = $wpdb->prefix . "options";
 	//Get the plugin options
-	//$options = $wpdb->get_results("SELECT option_value FROM $table_name WHERE option_name = 'amq_option_item' LIMIT 1;");
-	$options = get_option("amq_option_item");
+	$details = get_option("amq_option_item");
 
-	if (count($options) > 0) {
-		foreach($options as $row) {
-			$details = unserialize($row->option_value);
-		}
-	}
 	$amq_category = (!empty($details['category']) ? $details['category'] : "");
 	$category = get_the_category($post_before->ID);
 	$category = $category[0]->cat_ID;
